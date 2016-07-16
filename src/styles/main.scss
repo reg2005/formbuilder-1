@@ -1,4 +1,40 @@
 @import "../../bower_components/bootstrap/scss/bootstrap.scss";
+@import "../../bower_components/font-awesome/scss/font-awesome.scss";
+
+
+.button {
+  @extend .btn;
+}
+
+.small {
+  @extend .btn-secondary;
+}
+
+input[type=text]{
+    width: 100%;
+}
+
+.fb_right{
+  input[type=text]{
+    width: 100%;
+  }
+  textarea{
+    width: 100%;
+    &.size_small{
+      height:50px;
+    }
+    &.size_medium{
+      height:100px;
+    }
+    &.size_large{
+      height:150px;
+    }
+  }
+}
+
+select.js-change-field-type{
+  width:100%;
+}
 
 @mixin cf() {
   &:before, &:after {
