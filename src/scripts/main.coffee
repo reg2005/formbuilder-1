@@ -397,7 +397,7 @@ Formbuilder.FIELD_CATEGORIES =
   'Inputs':
     text:
       name: 'Text'
-      icon: 'font'
+      icon: 'f ont'
       defaultAttributes: sizeMed
     paragraph:
       name: 'Paragraph'

@@ -82,9 +82,13 @@ module.exports = (grunt) ->
     watch:
       build:
         files: [
-          '<%= srcFolder %>/**/*.{coffee,eco}'
+          '<%= srcFolder %>/**/*.{coffee,eco,scss}'
         ]
         tasks: 'default'
+      options:
+        livereload:
+          host: 'localhost'
+          port: 9000
       test:
         files: ['<%= testFolder %>/**/*_test.{coffee,js}']
         tasks: 'test'

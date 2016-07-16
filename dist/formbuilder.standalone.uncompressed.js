@@ -429,7 +429,7 @@
     'Inputs': {
       text: {
         name: 'Text',
-        icon: 'font',
+        icon: 'f ont',
         defaultAttributes: sizeMed
       },
       paragraph: {
@@ -1280,7 +1280,7 @@ window.JST["formbuilder/edit/base"] = function(__obj) {
       return _safe(result);
     };
     (function() {
-      var name;
+      var _name;
     
       _print(_safe(JST['formbuilder/edit/common'](this)));
     
@@ -1290,7 +1290,7 @@ window.JST["formbuilder/edit/base"] = function(__obj) {
     
       _print(_safe('\n'));
     
-      _print(_safe(typeof JST[name = "formbuilder/edit/fields/" + (this.model.get(Formbuilder.mappings.FIELD_TYPE))] === "function" ? JST[name](this) : void 0));
+      _print(_safe(typeof JST[_name = "formbuilder/edit/fields/" + (this.model.get(Formbuilder.mappings.FIELD_TYPE))] === "function" ? JST[_name](this) : void 0));
     
       _print(_safe('\n'));
     
@@ -1341,9 +1341,9 @@ window.JST["formbuilder/edit/base_non_input"] = function(__obj) {
       return _safe(result);
     };
     (function() {
-      var name;
+      var _name;
     
-      _print(_safe(typeof JST[name = "formbuilder/edit/fields/" + (this.model.get(Formbuilder.mappings.FIELD_TYPE))] === "function" ? JST[name](this) : void 0));
+      _print(_safe(typeof JST[_name = "formbuilder/edit/fields/" + (this.model.get(Formbuilder.mappings.FIELD_TYPE))] === "function" ? JST[_name](this) : void 0));
     
       _print(_safe('\n\n'));
     
@@ -1398,6 +1398,7 @@ window.JST["formbuilder/edit/bulk_add_options_modal"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe('<div class=\'modal_dialog\'>\n  <div class=\'modal_content\'>\n    <div class=\'modal_header\'>\n      <a class=\'close\' data-dismiss=\'modal\'>&times;</a>\n      <h3>Add options in bulk</h3>\n    </div>\n    <div class=\'modal_body\'>\n      <textarea rows=\'10\'></textarea>\n      <div class=\'form_hint\'>\n        One option per line\n      </div>\n    </div>\n    <div class=\'modal_footer\'>\n      <div class=\'modal_footer_primary\'>\n        <button class=\'button info\'>Add options</button>\n      </div>\n    </div>\n  </div>\n</div>\n'));
     
     }).call(this);
@@ -1443,6 +1444,7 @@ window.JST["formbuilder/edit/checkboxes"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe('<div class=\'fb_edit_section fb_edit_section_boxes\'>\n  <label class=\'control\'>\n    <input type=\'checkbox\' data-rv-checked=\'model.'));
     
       _print(Formbuilder.mappings.REQUIRED);
@@ -1500,13 +1502,13 @@ window.JST["formbuilder/edit/columns"] = function(__obj) {
       return _safe(result);
     };
     (function() {
-      var i, j, len, option, ref;
+      var i, option, _i, _len, _ref;
     
       _print(_safe('<hr />\n\n<div class=\'fb_edit_section\'>\n  <label>Columns</label>\n\n  <div class=\'fb_options\'>\n    '));
     
-      ref = this.model.getColumns();
-      for (i = j = 0, len = ref.length; j < len; i = ++j) {
-        option = ref[i];
+      _ref = this.model.getColumns();
+      for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
+        option = _ref[i];
         _print(_safe('\n      <fieldset class=\'option drag_list_item\' data-index="'));
         _print(i);
         _print(_safe('">\n        <span class=\'drag_list_item_box\'>\n          <i class=\'fa fa-reorder drag_list_reorder\'></i>\n          <span class=\'drag_list_item_input\'>\n            <input type="text" data-rv-input="model.field_options.columns.'));
@@ -1583,6 +1585,7 @@ window.JST["formbuilder/edit/common"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe(JST['formbuilder/edit/label'](this)));
     
       _print(_safe('\n'));
@@ -1638,15 +1641,15 @@ window.JST["formbuilder/edit/conditional"] = function(__obj) {
       return _safe(result);
     };
     (function() {
-      var condition, i, j, k, l, len, len1, len2, len3, m, method, model, optionLabel, ref, ref1, ref2, ref3, ref4, ref5;
+      var condition, i, method, model, optionLabel, _i, _j, _k, _l, _len, _len1, _len2, _len3, _ref, _ref1, _ref2, _ref3, _ref4, _ref5;
     
       _print(_safe('<hr />\n\n'));
     
       if (this.canAddConditions() || this.model.isConditional()) {
         _print(_safe('\n  <div class=\'fb_edit_section fb_edit_section_conditions\'>\n    <label>Rules</label>\n\n    '));
-        ref = this.model.getConditions();
-        for (i = j = 0, len = ref.length; j < len; i = ++j) {
-          condition = ref[i];
+        _ref = this.model.getConditions();
+        for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
+          condition = _ref[i];
           _print(_safe('\n      <div class=\'fb_edit_section_horiz\'>\n        <label>\n          '));
           if (i === 0) {
             _print(_safe('\n            Only show this field if...\n          '));
@@ -1658,9 +1661,9 @@ window.JST["formbuilder/edit/conditional"] = function(__obj) {
           _print(_safe('.'));
           _print(i);
           _print(_safe('.response_field_id\'>\n              '));
-          ref1 = this.conditionFieldOptions();
-          for (k = 0, len1 = ref1.length; k < len1; k++) {
-            model = ref1[k];
+          _ref1 = this.conditionFieldOptions();
+          for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
+            model = _ref1[_j];
             _print(_safe('\n                <option value="'));
             _print(model.id);
             _print(_safe('">'));
@@ -1674,9 +1677,9 @@ window.JST["formbuilder/edit/conditional"] = function(__obj) {
             _print(_safe('.'));
             _print(i);
             _print(_safe('.method\'>\n                '));
-            ref2 = this.conditionMethodsAtIndex(i);
-            for (l = 0, len2 = ref2.length; l < len2; l++) {
-              method = ref2[l];
+            _ref2 = this.conditionMethodsAtIndex(i);
+            for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
+              method = _ref2[_k];
               _print(_safe('\n                  <option value="'));
               _print(method.key);
               _print(_safe('">'));
@@ -1688,15 +1691,15 @@ window.JST["formbuilder/edit/conditional"] = function(__obj) {
           _print(_safe('\n          </div>\n\n          <div class=\'fb_conditional_opt\'>\n            '));
           if (this.conditionMethod(i)) {
             _print(_safe('\n              '));
-            if ((ref3 = this.conditionField(i).field_type) === 'dropdown' || ref3 === 'checkboxes' || ref3 === 'radio') {
+            if ((_ref3 = this.conditionField(i).field_type) === 'dropdown' || _ref3 === 'checkboxes' || _ref3 === 'radio') {
               _print(_safe('\n                <select data-width=\'100%\' data-rv-value="model.'));
               _print(Formbuilder.mappings.CONDITIONS);
               _print(_safe('.'));
               _print(i);
               _print(_safe('.value">\n                  '));
-              ref4 = this.conditionValueOptions(i);
-              for (m = 0, len3 = ref4.length; m < len3; m++) {
-                optionLabel = ref4[m];
+              _ref4 = this.conditionValueOptions(i);
+              for (_l = 0, _len3 = _ref4.length; _l < _len3; _l++) {
+                optionLabel = _ref4[_l];
                 _print(_safe('\n                    <option value=\''));
                 _print(optionLabel);
                 _print(_safe('\'>'));
@@ -1704,7 +1707,7 @@ window.JST["formbuilder/edit/conditional"] = function(__obj) {
                 _print(_safe('</option>\n                  '));
               }
               _print(_safe('\n                </select>\n              '));
-            } else if ((ref5 = this.conditionMethod(i)) === 'shorter' || ref5 === 'longer') {
+            } else if ((_ref5 = this.conditionMethod(i)) === 'shorter' || _ref5 === 'longer') {
               _print(_safe('\n                <div class=\'input_group\'>\n                  <input type=\'text\' data-rv-input="model.'));
               _print(Formbuilder.mappings.CONDITIONS);
               _print(_safe('.'));
@@ -1781,6 +1784,7 @@ window.JST["formbuilder/edit/default_location"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe('<hr />\n\n<div class=\'fb_edit_section\'>\n  <a class=\''));
     
       _print(Formbuilder.options.BUTTON_CLASS);
@@ -1830,6 +1834,7 @@ window.JST["formbuilder/edit/default_location_modal"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe('<div class=\'modal_dialog\'>\n  <div class=\'modal_content\'>\n    <div class=\'modal_header\'>\n      <a class=\'close\' data-dismiss=\'modal\'>&times;</a>\n      <h3>Set default location</h3>\n    </div>\n    <div class=\'modal_body\'>\n      <div class=\'fb_default_location_modal_map\'></div>\n      <p class=\'margin_th\'>Drag the map to set your new default location.</p>\n    </div>\n    <div class=\'modal_footer\'>\n      <div class=\'modal_footer_primary\'>\n        <button class=\'button info\'>Save and close</button>\n      </div>\n    </div>\n  </div>\n</div>\n'));
     
     }).call(this);
@@ -1875,6 +1880,7 @@ window.JST["formbuilder/edit/description"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe('<div class=\'fb_edit_section\'>\n  <label>Add a description</label>\n  <textarea data-rv-input=\'model.'));
     
       _print(Formbuilder.mappings.DESCRIPTION);
@@ -1924,6 +1930,7 @@ window.JST["formbuilder/edit/disable_cents"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe('<hr />\n\n<div class=\'fb_edit_section\'>\n  <label class=\'control\'>\n    <input type="checkbox" data-rv-checked="model.'));
     
       _print(Formbuilder.mappings.DISABLE_CENTS);
@@ -1973,6 +1980,7 @@ window.JST["formbuilder/edit/disable_seconds"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe('<hr />\n\n<div class=\'fb_edit_section\'>\n  <label class=\'control\'>\n    <input type="checkbox" data-rv-checked="model.'));
     
       _print(Formbuilder.mappings.DISABLE_SECONDS);
@@ -2022,15 +2030,15 @@ window.JST["formbuilder/edit/field_type"] = function(__obj) {
       return _safe(result);
     };
     (function() {
-      var field, k, ref;
+      var field, k, _ref;
     
       _print(_safe('<div class=\'fb_edit_section\'>\n  '));
     
       if (this.model.typeUnlocked) {
         _print(_safe('\n    <label>Type</label>\n    <select data-width=\'100%\' class=\'js-change-field-type\'>\n      '));
-        ref = Formbuilder.FIELD_TYPES;
-        for (k in ref) {
-          field = ref[k];
+        _ref = Formbuilder.FIELD_TYPES;
+        for (k in _ref) {
+          field = _ref[k];
           _print(_safe('\n        <option value=\''));
           _print(k);
           _print(_safe('\' '));
@@ -2093,6 +2101,7 @@ window.JST["formbuilder/edit/fields/address"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe('<hr />\n\n<div class=\'fb_edit_section fb_edit_section_horiz\'>\n  <label>Format</label>\n  <div class=\'fb_edit_section_horiz_content\'>\n    <select data-width=\'auto\' data-rv-value="model.'));
     
       _print(Formbuilder.mappings.ADDRESS_FORMAT);
@@ -2142,6 +2151,7 @@ window.JST["formbuilder/edit/fields/block_of_text"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe('<div class=\'fb_edit_section fb_edit_section_label\'>\n  <label>Text</label>\n  <textarea data-rv-input=\'model.'));
     
       _print(Formbuilder.mappings.DESCRIPTION);
@@ -2199,6 +2209,7 @@ window.JST["formbuilder/edit/fields/checkboxes"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe(JST['formbuilder/edit/options'](_.extend(this, {
         includeOther: true
       }))));
@@ -2248,6 +2259,7 @@ window.JST["formbuilder/edit/fields/dropdown"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe(JST['formbuilder/edit/options'](_.extend(this, {
         includeBlank: true
       }))));
@@ -2297,6 +2309,7 @@ window.JST["formbuilder/edit/fields/file"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe('<hr />\n\n<div class=\'fb_edit_section fb_edit_section_horiz\'>\n  <label>Allow users to upload...</label>\n  <div class=\'fb_edit_section_horiz_content\'>\n    <select data-rv-value="model.'));
     
       _print(Formbuilder.mappings.FILE_TYPES);
@@ -2346,6 +2359,7 @@ window.JST["formbuilder/edit/fields/map_marker"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe(JST['formbuilder/edit/default_location']()));
     
       _print(_safe('\n'));
@@ -2393,6 +2407,7 @@ window.JST["formbuilder/edit/fields/number"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe(JST['formbuilder/edit/min_max']()));
     
       _print(_safe('\n'));
@@ -2448,6 +2463,7 @@ window.JST["formbuilder/edit/fields/page_break"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       if (this.model.typeUnlocked) {
         _print(_safe('\n  '));
         _print(_safe(JST['formbuilder/edit/field_type'](this)));
@@ -2501,6 +2517,7 @@ window.JST["formbuilder/edit/fields/paragraph"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe(JST['formbuilder/edit/size']()));
     
       _print(_safe('\n'));
@@ -2552,6 +2569,7 @@ window.JST["formbuilder/edit/fields/phone"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe('<hr />\n\n<div class=\'fb_edit_section fb_edit_section_horiz\'>\n  <label>Format</label>\n  <div class=\'fb_edit_section_horiz_content\'>\n    <select data-width="100%" data-rv-value="model.'));
     
       _print(Formbuilder.mappings.PHONE_FORMAT);
@@ -2601,6 +2619,7 @@ window.JST["formbuilder/edit/fields/price"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe(JST['formbuilder/edit/disable_cents']()));
     
       _print(_safe('\n'));
@@ -2648,6 +2667,7 @@ window.JST["formbuilder/edit/fields/radio"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe(JST['formbuilder/edit/options'](_.extend(this, {
         includeOther: true
       }))));
@@ -2697,6 +2717,7 @@ window.JST["formbuilder/edit/fields/section_break"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe(JST['formbuilder/edit/common'](this)));
     
       _print(_safe('\n'));
@@ -2748,6 +2769,7 @@ window.JST["formbuilder/edit/fields/table"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe(JST['formbuilder/edit/columns'](this)));
     
       _print(_safe('\n'));
@@ -2795,6 +2817,7 @@ window.JST["formbuilder/edit/fields/text"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe(JST['formbuilder/edit/size']()));
     
       _print(_safe('\n'));
@@ -2846,6 +2869,7 @@ window.JST["formbuilder/edit/fields/time"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe(JST['formbuilder/edit/disable_seconds']()));
     
       _print(_safe('\n'));
@@ -2893,6 +2917,7 @@ window.JST["formbuilder/edit/integer_only"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe('<hr />\n\n<div class=\'fb_edit_section\'>\n  <label class=\'control\'>\n    <input type=\'checkbox\' data-rv-checked=\'model.'));
     
       _print(Formbuilder.mappings.INTEGER_ONLY);
@@ -2942,6 +2967,7 @@ window.JST["formbuilder/edit/label"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe('<div class=\'fb_edit_section fb_edit_section_label\'>\n  <label>Label</label>\n  <input type=\'text\' data-rv-input=\'model.'));
     
       _print(Formbuilder.mappings.LABEL);
@@ -2991,6 +3017,7 @@ window.JST["formbuilder/edit/min_max"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe('<hr />\n\n<div class=\'fb_edit_section fb_edit_section_horiz fb_edit_section_min_max fb_edit_section_between\'>\n  <label>Min / Max</label>\n  <div class=\'fb_edit_section_horiz_content\'>\n    <span>Between</span>\n    <input type="text" data-rv-input="model.'));
     
       _print(Formbuilder.mappings.MIN);
@@ -3044,6 +3071,7 @@ window.JST["formbuilder/edit/min_max_length"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe('<hr />\n\n<div class=\'fb_edit_section fb_edit_section_horiz fb_edit_section_min_max_length fb_edit_section_between\'>\n  <label>Min / Max Length</label>\n  <div class=\'fb_edit_section_horiz_content\'>\n    <span>Between</span>\n    <input type="text" data-rv-input="model.'));
     
       _print(Formbuilder.mappings.MINLENGTH);
@@ -3101,7 +3129,7 @@ window.JST["formbuilder/edit/options"] = function(__obj) {
       return _safe(result);
     };
     (function() {
-      var fieldType, i, j, len, option, ref;
+      var fieldType, i, option, _i, _len, _ref;
     
       fieldType = this.model.field_type === 'checkboxes' ? 'checkbox' : 'radio';
     
@@ -3115,9 +3143,9 @@ window.JST["formbuilder/edit/options"] = function(__obj) {
     
       _print(_safe('\n\n  <div class=\'fb_options\'>\n    '));
     
-      ref = this.model.getOptions();
-      for (i = j = 0, len = ref.length; j < len; i = ++j) {
-        option = ref[i];
+      _ref = this.model.getOptions();
+      for (i = _i = 0, _len = _ref.length; _i < _len; i = ++_i) {
+        option = _ref[i];
         _print(_safe('\n      <fieldset class=\'option drag_list_item drag_list_item_checkbox\' data-index="'));
         _print(i);
         _print(_safe('">\n        <span class=\'drag_list_item_box\'>\n          <i class=\'fa fa-reorder drag_list_reorder\'></i>\n          <label class="control">\n            <input type="'));
@@ -3186,13 +3214,13 @@ window.JST["formbuilder/edit/preset_values_modal"] = function(__obj) {
       return _safe(result);
     };
     (function() {
-      var i, j, k, l, len, len1, len2, len3, m, n, ref, ref1, ref2, ref3;
+      var i, j, _i, _j, _k, _l, _len, _len1, _len2, _len3, _ref, _ref1, _ref2, _ref3;
     
       _print(_safe('<div class=\'modal_dialog\'>\n  <div class=\'modal_content\'>\n    <div class=\'modal_header\'>\n      <a class=\'close\' data-dismiss=\'modal\'>&times;</a>\n      <h3>Preset values</h3>\n    </div>\n    <div class=\'modal_body\'>\n      <p>\n      These cells will be pre-populated when displaying the form, and will not be editable by the user.\n      </p>\n      <table class=\'border border_all\'>\n        <thead>\n          <tr>\n            '));
     
-      ref = rf.get(Formbuilder.mappings.COLUMNS) || [];
-      for (k = 0, len = ref.length; k < len; k++) {
-        i = ref[k];
+      _ref = rf.get(Formbuilder.mappings.COLUMNS) || [];
+      for (_i = 0, _len = _ref.length; _i < _len; _i++) {
+        i = _ref[_i];
         _print(_safe('\n              <th>'));
         _print(rf.get(Formbuilder.mappings.COLUMNS)[i].label);
         _print(_safe('</th>\n            '));
@@ -3200,13 +3228,13 @@ window.JST["formbuilder/edit/preset_values_modal"] = function(__obj) {
     
       _print(_safe('\n          </tr>\n        </thead>\n        <tbody>\n          '));
     
-      ref1 = rf.numRows;
-      for (l = 0, len1 = ref1.length; l < len1; l++) {
-        j = ref1[l];
+      _ref1 = rf.numRows;
+      for (_j = 0, _len1 = _ref1.length; _j < _len1; _j++) {
+        j = _ref1[_j];
         _print(_safe('\n            <tr>\n              '));
-        ref2 = rf.get(Formbuilder.mappings.COLUMNS) || [];
-        for (m = 0, len2 = ref2.length; m < len2; m++) {
-          i = ref2[m];
+        _ref2 = rf.get(Formbuilder.mappings.COLUMNS) || [];
+        for (_k = 0, _len2 = _ref2.length; _k < _len2; _k++) {
+          i = _ref2[_k];
           _print(_safe('\n                <td><input type=\'text\' data-col=\''));
           _print(i);
           _print(_safe('\' value=\''));
@@ -3220,9 +3248,9 @@ window.JST["formbuilder/edit/preset_values_modal"] = function(__obj) {
     
       if (rf.get(Formbuilder.mappings.COLUMN_TOTALS)) {
         _print(_safe('\n          <tfoot>\n            <tr>\n              '));
-        ref3 = rf.get(Formbuilder.mappings.COLUMNS) || [];
-        for (n = 0, len3 = ref3.length; n < len3; n++) {
-          i = ref3[n];
+        _ref3 = rf.get(Formbuilder.mappings.COLUMNS) || [];
+        for (_l = 0, _len3 = _ref3.length; _l < _len3; _l++) {
+          i = _ref3[_l];
           _print(_safe('\n                <td>[total]</td>\n              '));
         }
         _print(_safe('\n            </tr>\n          </tfoot>\n        '));
@@ -3273,6 +3301,7 @@ window.JST["formbuilder/edit/size"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe('<hr />\n\n<div class=\'fb_edit_section fb_edit_section_horiz\'>\n  <label>Size</label>\n  <div class=\'fb_edit_section_horiz_content\'>\n    <select data-width="100%" data-rv-value="model.'));
     
       _print(Formbuilder.mappings.SIZE);
@@ -3322,6 +3351,7 @@ window.JST["formbuilder/edit/units"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe('<hr />\n\n<div class=\'fb_edit_section fb_edit_section_horiz fb_edit_section_units\'>\n  <label>Units</label>\n  <div class=\'fb_edit_section_horiz_content\'>\n    <input type="text" data-rv-input="model.'));
     
       _print(Formbuilder.mappings.UNITS);
@@ -3371,6 +3401,7 @@ window.JST["formbuilder/page"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe(JST['formbuilder/partials/left_side'](this)));
     
       _print(_safe('\n'));
@@ -3422,13 +3453,13 @@ window.JST["formbuilder/partials/left_side"] = function(__obj) {
       return _safe(result);
     };
     (function() {
-      var field, fields, key, ref, sectionName;
+      var field, fields, key, sectionName, _ref;
     
       _print(_safe('<div class=\'fb_left\'>\n  <div class=\'fb_add_field_wrapper\'>\n    <div class=\'fb_left_header\'>\n      <h4>Add a new field</h4>\n    </div>\n\n    '));
     
-      ref = Formbuilder.FIELD_CATEGORIES;
-      for (sectionName in ref) {
-        fields = ref[sectionName];
+      _ref = Formbuilder.FIELD_CATEGORIES;
+      for (sectionName in _ref) {
+        fields = _ref[sectionName];
         _print(_safe('\n      <h5>'));
         _print(sectionName);
         _print(_safe('</h5>\n      <div class=\'fb_add_field_section\'>\n        '));
@@ -3500,6 +3531,7 @@ window.JST["formbuilder/partials/right_side"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe('<div class=\'fb_right\'>\n  <div class=\'fb_identification_field_wrapper\'>\n    <div class=\'fb_identification_cover\'></div>\n    <div class=\'fb_identification_hint\'>\n      '));
     
       if (this.view.options.identificationFields) {
@@ -3553,6 +3585,7 @@ window.JST["formbuilder/view/base"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe('<div class=\'cover\'></div>\n'));
     
       _print(_safe(JST['formbuilder/view/duplicate_remove'](this)));
@@ -3602,6 +3635,7 @@ window.JST["formbuilder/view/duplicate_remove"] = function(__obj) {
       return _safe(result);
     };
     (function() {
+    
       _print(_safe('<div class=\'actions_wrapper\'>\n  <button class="js-duplicate fb_button_success '));
     
       _print(Formbuilder.options.BUTTON_CLASS);
